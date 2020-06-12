@@ -1,4 +1,4 @@
-# PassGen - Create secure passwords
+# PyPassGen - Create secure passwords
 
 This is my take on a password generator with enough entropy, easy to read and fun to remember.
 
