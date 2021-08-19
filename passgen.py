@@ -1,16 +1,13 @@
 #!/usr/bin/env python
 
-import argparse
-import csv
-import random
-
+import os, sys, argparse, csv, random
 
 def make_pw(add_number=True, add_symbol=True):
     rnd = random.SystemRandom()
-    with open('verbs.txt') as verbfile:
+    with open(os.path.join(sys.path[0], "verbs.txt"), "r") as verbfile:
         reader = csv.reader(verbfile, delimiter=',')
         verblist = [i for row in reader for i in row]
-    with open('nouns.txt') as nounfile:
+    with open(os.path.join(sys.path[0], "nouns.txt"), "r") as nounfile:
         reader = csv.reader(nounfile, delimiter=',')
         nounlist = [i for row in reader for i in row]
     final_pw = []
